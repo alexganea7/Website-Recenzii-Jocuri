@@ -1,4 +1,11 @@
 # Website Recenzii jocuri
 
-consola: node app.js <br />
-browser: localhost:5000
+## Consola 
+```console
+node app.js
+```
+        
+## Browser
+```console
+localhost:5000
+```
