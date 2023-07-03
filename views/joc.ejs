@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="joc.css">
+    <script src="joc.js" defer></script>
+    <title>joc</title>
+</head>
+<body>
+    <header>
+        <span id="buton-meniu"> &#9776;</span>
+        <div class="header-container">
+            <div>
+                <div id="logo-div">
+                    <img src="../public/resurse/imagini/logo2.png" alt="logo" id="logo">
+                    <h2>TITLU</h2>
+                </div>
+                <div class="meniu"></div>
+            </div>
+    
+            <div>
+                <img src="../public/resurse/imagini/search.png" alt="search" class="search-svg" draggable="false">
+                <img src="../public/resurse/imagini/random.svg" alt="random-svg" class="buton-random" draggable="false">
+                <img src="../public/resurse/imagini/switch-mode-svg.svg" alt="switch-mode-svg" class="buton-lightmode" draggable="false">
+                <img id="user" src="../public/resurse/imagini/user.svg" alt="user">
+                <input type="text" id="search" placeholder="Căutare" autocomplete="off" class="search">
+            </div>
+        </div>
+        <nav class="nav">
+            <ul class="meniu">
+                <span id="buton-x"> &times;</span>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="index.html#top-jocuri">Recomandări</a></li>
+                <li><a href="index.html#populare">Populare</a></li>
+                <li><a href="index.html#indie">Indie</a></li>
+                <li><a href="index.html#categorii" id="nav-categorii">Categorii</a>
+                    <ul class="submeniu">
+                        <li><a>Aventură</a></li>
+                        <li><a>Lupte</a></li>
+                        <li><a>Acțiune</a></li>
+                        <li><a>FPS</a></li>
+                        <li><a>Platformer</a></li>
+                        <li><a>Single-player</a></li>
+                    </ul>
+                </li>
+            </ul>   
+        </nav>
+    </header>
+    <div class="slide">
+        <img src="" draggable="false" alt="test">
+        <div class="slide-info">
+            <h3></h3>
+            <span></span>
+        </div>
+    </div>
+ 
+    <div class="descriere"> 
+        <h2>TITLU</h2>
+        <h2></h2>
+    </div>
+    <div id="containerPrincipal">
+    <div>
+        <h1>Review-uri joc</h1>
+
+    <div class="review-container">
+        <h2>Review-urile jocului <%=titluJoc%></h2>
+
+
+        <h3>Adaugă un review</h3>
+        <form method="post" action="/joc" target="iframe" id="review-form">
+
+        <input type="text" id="reviewId" name="nume" placeholder="Nume" required>
+        <input type="hidden" id="titluId" name="titluId"  value="3487">
+
+        <textarea id="review" name="review" required placeholder="Click pentru a scrie..." style="resize: none;" ></textarea>
+
+        <button id = "trimiteReview" type="submit">Trimite review</button>
+        </form>
+        <iframe name="iframe" id="reviews"> </iframe>
+    
+    
+    <div id="colectieReview">
+        <% for (var i = 0; i < reviewuri.length; i++) { %>
+          <% if (reviewuri[i].titlu === titluJoc) { %>
+        <div id="recenzie">
+          <p><span>Nume:</span> <%= reviewuri[i].nume %></p>
+          <p><span>Recenzie:</span> <%= reviewuri[i].recenzie %></p>
+        </div>
+          <% } %>
+        <% } %>
+        </div>
+        
+        </div>
+    </div>
+    </div>
+    <%- include('footer.ejs'); %>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('head.ejs'); %>
+<body>
+    <%- include('header.ejs'); %>
+    <form action="/login_post" method="post" id="testform">
+        <p><label>Username:</label><input placeholder="Username..." type="text" name="username"></p> 
+        <p><label>Parola:</label><input placeholder="Parola..." type="password" name="parola"></p> 
+        <button type="submit" id="buton">LOGIN</button>
+        <img id = "pokemon" src="/public/resurse/imagini/pokemon4.png"> 
+    </form>
+    <%- include('footer.ejs'); %>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>Titlu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script-poze.js" defer></script>
+    <script src="script.js" defer></script>
+    
+</head>
+<body>
+      
+<header>
+    <span id="buton-meniu"> &#9776;</span>
+    <div class="header-container">
+        <div>
+            <div id="logo-div">
+                <img src="../public/resurse/imagini/logo2.png" alt="logo" id="logo">
+                <h2>TITLU</h2>
+            </div>
+            <div class="meniu"></div>
+        </div>
+
+        <div>
+            <img src="../public/resurse/imagini/search.png" alt="search" class="search-svg" draggable="false">
+            <img src="../public/resurse/imagini/random.svg" alt="random-svg" class="buton-random" draggable="false">
+            <img src="../public/resurse/imagini/switch-mode-svg.svg" alt="switch-mode-svg" class="buton-lightmode" draggable="false">
+            <img id="user" src="../public/resurse/imagini/user.svg" alt="user">
+            <input type="text" id="search" placeholder="Căutare" autocomplete="off" class="search">
+        </div>
+    </div>
+    <nav class="nav">
+        <ul class="meniu">
+            <span id="buton-x"> &times;</span>
+            <li><a href="#acasa">Acasă</a></li>
+            <li><a href="#top-jocuri">Recomandări</a></li>
+            <li><a href="#populare">Populare</a></li>
+            <li><a href="#indie">Indie</a></li>
+            <li><a href="#categorii" id="nav-categorii">Categorii</a>
+                <ul class="submeniu">
+                    <li><a>Aventură</a></li>
+                    <li><a>Lupte</a></li>
+                    <li><a>Acțiune</a></li>
+                    <li><a>FPS</a></li>
+                    <li><a>Platformer</a></li>
+                    <li><a>Single-player</a></li>
+                </ul>
+            </li>
+        </ul>   
+    </nav>
+</header>
+
+   
+    <div class="reclama" id="acasa">
+        <img id = "poza-dc" src="../public/resurse/imagini/deadcells.png" draggable="false" alt="deadcells">
+        <div class="reclama-video">
+            <video autoplay loop muted class="video-fundal">
+                <source src="../public/resurse/imagini/cinematic.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <section class="top-jocuri" id="top-jocuri">
+    <div class="titluTop">Recomandări jocuri <span class="info-icon">&#9432;</span></div>
+    <div class="slider">
+        <div class="slide-track">
+            
+
+        </div>
+    </div>
+    </section>
+
+    <section class="populare" id="populare">
+        <h2 class="titluPopulare"> Jocuri populare <span class="info-icon">&#9432;</span> </h2>
+        <div class="container-populare">
+            
+        </div>
+        <button id="show-more-populare" class="show-more">Show more</button>
+    </section>  
+
+    <section class="indie" id="indie">
+        <h2 class="titluPopulare"> Top jocuri indie <span class="info-icon">&#9432;</span> </h2>
+        <div class="container-indie">
+        </div>
+
+        <button id="show-more-indie" class="show-more">Show more</button>
+    </section>  
+    <div class="titluCategorii"> Categorii <span class="info-icon">&#9432;</span> </div>
+    <section class="categorii" id="categorii">
+            <div class="categorie"><h2>Aventură</h2><img src="../public/resurse/imagini/categorie1-img.png" draggable="false" alt="cat1"></div>
+            <div class="categorie"><h2>Lupte</h2><img src="../public/resurse/imagini/categorie2.3-img.png" draggable="false" alt="cat2"></div>
+            <div class="categorie"><h2>Acțiune</h2><img src="../public/resurse/imagini/categorie3-img.png" draggable="false" alt="cat3"></div>
+            <div class="categorie"><h2>FPS</h2><img src="../public/resurse/imagini/categorie4-img.png" draggable="false" alt="cat4"></div>
+            <div class="categorie"><h2>Platformer</h2><img src="../public/resurse/imagini/categorie5-img.png" draggable="false" alt="cat5"></div>
+            <div class="categorie"><h2>Single-player</h2><img src="../public/resurse/imagini/categorie6-img.png" draggable="false" alt="cat6"></div>
+    </section>
+    <footer>
+        <p>Designed by Alex Ganea © 2023 </p>
+    </footer>
+</body>
+</html>
